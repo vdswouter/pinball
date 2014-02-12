@@ -9,19 +9,32 @@
 #define _OF_CONTROL
 
 #include "ofMain.h"
+#include "ofxGui.h"
 
 class AppControls {
     
 public:
-    
+    void setup();
     void update();
     void draw();
     
-    
-    AppControls();
+    vector<ofPoint> videoBounds;
+    vector<ofPoint> projectionBounds;
     
 private:
+    ofxPanel projectionControls;
+    ofxVec2Slider ULProjectionslider;
+    ofxVec2Slider DLProjectionslider;
+    ofxVec2Slider URProjectionslider;
+    ofxVec2Slider DRProjectionslider;
     
+    ofxPanel videoControls;
+    ofxVec2Slider ULVideoslider;
+    ofxVec2Slider DLVideoslider;
+    ofxVec2Slider URVideoslider;
+    ofxVec2Slider DRVideoslider;
+    
+    ofxPanel gameControls;
 };
 
 #endif

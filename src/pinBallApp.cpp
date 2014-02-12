@@ -1,25 +1,41 @@
-#include "pinbBallApp.h"
+#include "pinBallApp.h"
 
 //--------------------------------------------------------------
 void pinBall::setup(){
     ofEnableSmoothing();
     ofSetBackgroundColor(33);
+    ofSetFrameRate(60);
     
+    stats.setup();
+    appControls.setup();
 }
 
 //--------------------------------------------------------------
 void pinBall::update(){
-
+    stats.update();
+    appControls.update();
 }
 
 //--------------------------------------------------------------
 void pinBall::draw(){
-
+    if (showStats) {
+        stats.draw();
+    }
+    if (showMapControls) {
+        appControls.draw();
+    }
 }
 
 //--------------------------------------------------------------
 void pinBall::keyPressed(int key){
-
+    switch (key) {
+        case 's':
+            showStats = !showStats;
+            break;
+        case 'm':
+            showMapControls = !showMapControls;
+            break;
+    }
 }
 
 //--------------------------------------------------------------

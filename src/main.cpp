@@ -1,5 +1,5 @@
 #include "ofMain.h"
-#include "pinbBallApp.h"
+#include "pinBallApp.h"
 
 //========================================================================
 int main( ){

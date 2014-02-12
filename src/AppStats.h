@@ -9,6 +9,7 @@
 #define _OF_STATS
 
 #include "ofMain.h"
+#include "ofxGui.h"
 
 class AppStats {
     
@@ -16,11 +17,22 @@ public:
     
     void update();
     void draw();
+    void setup();
     
-    
-    AppStats();
-    
+    int kinectAngle = 0;
+    int videoTreshold = 80;
+
 private:
+    ofxGuiGroup FPSui;
+    ofxFloatSlider fpsslider;
+    vector<float> fpshistory;
+    
+    ofxGuiGroup kinectDataPanel;
+    ofxIntSlider KinectAngleSlider;
+    ofxIntSlider videoThresholdSlider;
+    
+    void setKinectAngle(int & angle);
+    void setVideoThreshold(int & threshold);
     
 };
 
