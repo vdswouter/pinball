@@ -10,6 +10,7 @@
 
 #include "ofMain.h"
 #include "ofxGui.h"
+#include "ColorTracking.h"
 
 class AppStats {
     
@@ -17,22 +18,23 @@ public:
     
     void update();
     void draw();
-    void setup();
-    
-    int kinectAngle = 0;
-    int videoTreshold = 80;
+    void setup(ColorTracking *colorTrackingClass);
 
 private:
+    ColorTracking *ct;
+    
     ofxGuiGroup FPSui;
     ofxFloatSlider fpsslider;
     vector<float> fpshistory;
     
-    ofxGuiGroup kinectDataPanel;
-    ofxIntSlider KinectAngleSlider;
-    ofxIntSlider videoThresholdSlider;
+    ofxGuiGroup videoDataPanel;
+    ofxIntSlider toleranceSlider;
+    ofxIntSlider minAreaSlider;
+    ofxIntSlider maxAreaSlider;
+    ofxButton btnSetColor;
     
-    void setKinectAngle(int & angle);
-    void setVideoThreshold(int & threshold);
+    void setTolerance(int & val);
+    void setColorHandler();
     
 };
 

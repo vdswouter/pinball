@@ -19,10 +19,11 @@ public:
     VecType operator=(const VecType & v);
 	operator const VecType & ();
 	const VecType * operator->();
+    ofParameter<VecType> value;
+
 protected:
     void changeSlider(const void * parameter, float & value);
     void changeValue(VecType & value);
-    ofParameter<VecType> value;
     bool sliderChanging;
 };
 

@@ -28,6 +28,7 @@ void AppControls::setup(){
     videoControls.add(DLVideoslider.setup("DOWN LEFT", ofVec2f(0, ofGetHeight()), ofVec2f(0, 0), ofVec2f(ofGetWidth(), ofGetHeight())));
     videoControls.add(URVideoslider.setup("UP RIGHT", ofVec2f(ofGetWidth(), 0), ofVec2f(0, 0), ofVec2f(ofGetWidth(), ofGetHeight())));
     videoControls.add(DRVideoslider.setup("DOWN RIGHT", ofVec2f(ofGetWidth(), ofGetHeight()), ofVec2f(0,0), ofVec2f(ofGetWidth(), ofGetHeight())));
+    
 }
 
 void AppControls::update(){
@@ -48,6 +49,9 @@ void AppControls::update(){
     videoBounds[2].y = URVideoslider->y;
     videoBounds[3].x = DRVideoslider->x;
     videoBounds[3].y = DRVideoslider->y;
+}
+
+void AppControls::setMaximums(int w, int h){
 }
 
 void AppControls::draw(){

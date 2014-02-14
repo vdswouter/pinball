@@ -17,6 +17,7 @@ public:
     void setup();
     void update();
     void draw();
+    void setMaximums(int w, int h);
     
     vector<ofPoint> videoBounds;
     vector<ofPoint> projectionBounds;
@@ -35,6 +36,7 @@ private:
     ofxVec2Slider DRVideoslider;
     
     ofxPanel gameControls;
+    vector<ofxVec2Slider> sliders;
 };
 
 #endif

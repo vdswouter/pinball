@@ -8,7 +8,9 @@
 
 #include "AppStats.h"
 
-void AppStats::setup(){
+void AppStats::setup(ColorTracking *colorTrackingClass){
+    ct = colorTrackingClass; 
+    
     FPSui.setup();
     FPSui.setName("Framerate");
     FPSui.add(fpsslider.setup("FPS", ofGetFrameRate(), 0, 60));
@@ -19,12 +21,16 @@ void AppStats::setup(){
     for (int i = 0; i < 100; i++) {
         fpshistory.push_back(0);
     }
-    KinectAngleSlider.addListener(this, &AppStats::setKinectAngle);
-    videoThresholdSlider.addListener(this, &AppStats::setVideoThreshold);
+    toleranceSlider.addListener(this, &AppStats::setTolerance);
+    minAreaSlider.addListener(this, &AppStats::setTolerance);
+    maxAreaSlider.addListener(this, &AppStats::setTolerance);
+    btnSetColor.addListener(this, &AppStats::setColorHandler);
     
-    kinectDataPanel.setup();
-    kinectDataPanel.add(KinectAngleSlider.setup("Kinect Angle", kinectAngle, -30, 30));
-    kinectDataPanel.add(videoThresholdSlider.setup("threshold", videoTreshold, 0, 200));
+    videoDataPanel.setup();
+    videoDataPanel.add(toleranceSlider.setup("ColorTolerance", ct->tolerance, 0, 30));
+    videoDataPanel.add(minAreaSlider.setup("Minimum ball Area", 500, 0, 5000));
+    videoDataPanel.add(maxAreaSlider.setup("Maximum ball Area", 10000, 0, 20000));
+    videoDataPanel.add(btnSetColor.setup("Set The Color"));
 }
 
 void AppStats::update(){
@@ -38,7 +44,7 @@ void AppStats::update(){
 
 void AppStats::draw(){
     FPSui.draw();
-    kinectDataPanel.draw();
+    videoDataPanel.draw();
     if (!FPSui.minimized) {
         ofSetColor(0, 200);
         ofRect(FPSui.getPosition().x, FPSui.getPosition().y + FPSui.getHeight(), 100, 60);
@@ -49,9 +55,12 @@ void AppStats::draw(){
     }
 }
 
-void AppStats::setKinectAngle(int &angle){
-    kinectAngle = angle;
+void AppStats::setTolerance(int & val){
+    ct->tolerance = toleranceSlider.value;
+    ct->minArea = minAreaSlider.value;
+    ct->maxArea = maxAreaSlider.value;
 }
-void AppStats::setVideoThreshold(int &threshold){
-    
+
+void AppStats::setColorHandler(){
+    ct->PickColor = true;
 }

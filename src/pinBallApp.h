@@ -3,6 +3,8 @@
 #include "ofMain.h"
 #include "AppStats.h"
 #include "AppControls.h"
+#include "GameControls.h"
+#include "ColorTracking.h"
 
 class pinBall : public ofBaseApp{
 
@@ -23,9 +25,13 @@ public:
     
     bool showStats = false;
     bool showMapControls = false;
+    bool showGameControls = false;
+    bool showInfo = true;
     
 private:
+    ColorTracking colorTr;
+		
     AppStats stats;
     AppControls appControls;
-		
+    GameControls gameControls;
 };

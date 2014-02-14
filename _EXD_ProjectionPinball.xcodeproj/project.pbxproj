@@ -36,6 +36,8 @@
 		6CEDA5D018AC065F004D480A /* ofxSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CEDA5C518AC065F004D480A /* ofxSlider.cpp */; };
 		6CEDA5D118AC065F004D480A /* ofxSliderGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CEDA5C718AC065F004D480A /* ofxSliderGroup.cpp */; };
 		6CEDA5D218AC065F004D480A /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CEDA5C918AC065F004D480A /* ofxToggle.cpp */; };
+		6CEDA5D718AD64EB004D480A /* GameControls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CEDA5D518AD64EB004D480A /* GameControls.cpp */; };
+		6CEDA5DC18AD957E004D480A /* ColorTracking.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CEDA5DA18AD957E004D480A /* ColorTracking.cpp */; };
 		72A929D3561B8232A182ABFC /* ofxOscBundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65EEFA3DA3526E9CDD9C21F9 /* ofxOscBundle.cpp */; };
 		879A251454401BC0B6E4F238 /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9BFFBBF4CC43DEE890B3C3E /* OscTypes.cpp */; };
 		8F5205AEF8861EF234F0651A /* ofxOscSender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81967292BFC87A0144BD32C6 /* ofxOscSender.cpp */; };
@@ -234,6 +236,10 @@
 		6CEDA5C818AC065F004D480A /* ofxSliderGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxSliderGroup.h; sourceTree = "<group>"; };
 		6CEDA5C918AC065F004D480A /* ofxToggle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxToggle.cpp; sourceTree = "<group>"; };
 		6CEDA5CA18AC065F004D480A /* ofxToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxToggle.h; sourceTree = "<group>"; };
+		6CEDA5D518AD64EB004D480A /* GameControls.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameControls.cpp; sourceTree = "<group>"; };
+		6CEDA5D618AD64EB004D480A /* GameControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameControls.h; sourceTree = "<group>"; };
+		6CEDA5DA18AD957E004D480A /* ColorTracking.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ColorTracking.cpp; sourceTree = "<group>"; };
+		6CEDA5DB18AD957E004D480A /* ColorTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorTracking.h; sourceTree = "<group>"; };
 		6DD5A3CBB6D5BBA1C1354F1B /* flann.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = flann.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/flann.hpp; sourceTree = SOURCE_ROOT; };
 		7101CF2125B8B2BF46AA2662 /* cxcore.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cxcore.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv/cxcore.hpp; sourceTree = SOURCE_ROOT; };
 		71958293AC5292DE4B7C619D /* registration.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = registration.c; path = ../../../addons/ofxKinect/libs/libfreenect/src/registration.c; sourceTree = SOURCE_ROOT; };
@@ -723,6 +729,28 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		6CEDA5D418AD6271004D480A /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				6CEDA5D618AD64EB004D480A /* GameControls.h */,
+				6CEDA5D518AD64EB004D480A /* GameControls.cpp */,
+				6CC9432D18AA481E001914D3 /* AppControls.h */,
+				6CC9432E18AA4952001914D3 /* AppControls.cpp */,
+				6CC9433018AA4DD5001914D3 /* AppStats.h */,
+				6CC9433118AA4DE1001914D3 /* AppStats.cpp */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		6CEDA5D918AD9556004D480A /* video */ = {
+			isa = PBXGroup;
+			children = (
+				6CEDA5DB18AD957E004D480A /* ColorTracking.h */,
+				6CEDA5DA18AD957E004D480A /* ColorTracking.cpp */,
+			);
+			name = video;
+			sourceTree = "<group>";
+		};
 		6DFA2B327764FCDA2A8D882F /* include */ = {
 			isa = PBXGroup;
 			children = (
@@ -1001,13 +1029,11 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				6CEDA5D918AD9556004D480A /* video */,
+				6CEDA5D418AD6271004D480A /* Controls */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* pinBallApp.h */,
 				E4B69E1E0A3A1BDC003C02F2 /* pinBallApp.cpp */,
-				6CC9432D18AA481E001914D3 /* AppControls.h */,
-				6CC9432E18AA4952001914D3 /* AppControls.cpp */,
-				6CC9433018AA4DD5001914D3 /* AppStats.h */,
-				6CC9433118AA4DE1001914D3 /* AppStats.cpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -1181,6 +1207,7 @@
 				E4B69E210A3A1BDC003C02F2 /* pinBallApp.cpp in Sources */,
 				686B0DF6249B52E1A85B39EC /* ofxKinect.cpp in Sources */,
 				ACE7DC9A3223ED5EE1B80074 /* cameras.c in Sources */,
+				6CEDA5DC18AD957E004D480A /* ColorTracking.cpp in Sources */,
 				F4135EEFC911E9ED211FB6F9 /* core.c in Sources */,
 				6CEDA5D218AC065F004D480A /* ofxToggle.cpp in Sources */,
 				D31F5C1B140C59B2AF1533A8 /* registration.c in Sources */,
@@ -1194,6 +1221,7 @@
 				6CC9433C18AA53A1001914D3 /* tinyxml.cpp in Sources */,
 				6CC9433D18AA53A1001914D3 /* tinyxmlerror.cpp in Sources */,
 				FB09C6B2A1DA0EA217240CB8 /* ofxCvGrayscaleImage.cpp in Sources */,
+				6CEDA5D718AD64EB004D480A /* GameControls.cpp in Sources */,
 				E212C821D1064B92DD953A42 /* ofxCvHaarFinder.cpp in Sources */,
 				63020F16C7E8DED980111241 /* ofxCvImage.cpp in Sources */,
 				6CC9433E18AA53A1001914D3 /* tinyxmlparser.cpp in Sources */,

@@ -40,10 +40,11 @@ public:
 	
 
 	ofAbstractParameter & getParameter();
+    ofParameter<Type> value;
+
 
 protected:
 	virtual void render();
-	ofParameter<Type> value;
 	bool bUpdateOnReleaseOnly;
 	bool bGuiActive;
 	bool setValue(float mx, float my, bool bCheck);
