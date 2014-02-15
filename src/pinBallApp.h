@@ -34,4 +34,6 @@ private:
     AppStats stats;
     AppControls appControls;
     GameControls gameControls;
+    
+    void newPoint();
 };

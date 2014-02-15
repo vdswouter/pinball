@@ -22,15 +22,18 @@ public:
     
     ofPoint BallPosition;
     
+    ofEvent<void> NEW_POSITION;
+    
     bool PickColor = false;
     int tolerance = 5;
     int minArea = 500;
     int maxArea = 10000;
     
+    ofVec2f getVideoDimensions();
+    ofxCvColorImage rgb;
+
 private:
     ofVideoGrabber video;
-    
-    ofxCvColorImage rgb;
     ofxCvColorImage hsb;
     ofxCvGrayscaleImage hue;
     ofxCvGrayscaleImage sat;

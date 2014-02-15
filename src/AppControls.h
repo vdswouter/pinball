@@ -10,11 +10,12 @@
 
 #include "ofMain.h"
 #include "ofxGui.h"
+#include "ColorTracking.h"
 
 class AppControls {
     
 public:
-    void setup();
+    void setup(ColorTracking * colorTracking);
     void update();
     void draw();
     void setMaximums(int w, int h);
@@ -28,6 +29,7 @@ private:
     ofxVec2Slider DLProjectionslider;
     ofxVec2Slider URProjectionslider;
     ofxVec2Slider DRProjectionslider;
+    ofxToggle btnHideVideoControls;
     
     ofxPanel videoControls;
     ofxVec2Slider ULVideoslider;
@@ -37,6 +39,8 @@ private:
     
     ofxPanel gameControls;
     vector<ofxVec2Slider> sliders;
+    
+    ColorTracking *ct;
 };
 
 #endif

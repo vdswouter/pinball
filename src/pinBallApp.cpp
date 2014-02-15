@@ -7,9 +7,10 @@ void pinBall::setup(){
     ofSetFrameRate(60);
     
     colorTr.setup();
+    ofAddListener(colorTr.NEW_POSITION, this, &pinBall::newPoint);
 
     stats.setup(& colorTr);
-    appControls.setup();
+    appControls.setup(& colorTr);
     gameControls.setup();
     
 }
@@ -41,6 +42,10 @@ void pinBall::draw(){
         ofSetColor(255);
         ofDrawBitmapString("Press V to show/hide Video Controls\nPress M to show/hide Mapping Controls\nPress G to show Game Controls\nPress I to show/hide this window", 25, ofGetHeight()-85);
     }
+}
+
+void pinBall::newPoint(){
+    ofLogNotice() << "got event " << ofGetFrameNum();
 }
 
 //--------------------------------------------------------------

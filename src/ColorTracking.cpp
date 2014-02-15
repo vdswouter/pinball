@@ -36,10 +36,12 @@ void ColorTracking::update(){
         filtered.flagImageChanged();
         
         contours.findContours(filtered, minArea, maxArea, 1, false);
+        if (contours.nBlobs == 1) {
+            BallPosition = contours.blobs[0].centroid;
+            ofNotifyEvent(NEW_POSITION);
+        }
     }
-    if (contours.nBlobs == 1) {
-        BallPosition = contours.blobs[0].centroid;
-    }
+
 }
 
 void ColorTracking::draw(){
@@ -91,4 +93,8 @@ void ColorTracking::setColor(int x, int y){
         findHueColor.setBrightness(bri.getPixels()[my*w+mx]);
         PickColor = false;
     }
+}
+
+ofVec2f ColorTracking::getVideoDimensions(){
+    return ofVec2f(w, h);
 }
