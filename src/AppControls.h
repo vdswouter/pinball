@@ -23,6 +23,10 @@ public:
     vector<ofPoint> videoBounds;
     vector<ofPoint> projectionBounds;
     
+    ofEvent<void> NEW_PROJECTIONBOUNDS;
+    ofEvent<void> NEW_VIDEOBOUNDS;
+
+    
 private:
     ofxPanel projectionControls;
     ofxVec2Slider ULProjectionslider;

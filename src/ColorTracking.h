@@ -21,6 +21,7 @@ public:
     void setColor(int x,int y);
     
     ofPoint BallPosition;
+    ofPoint BallPositionMapped;
     
     ofEvent<void> NEW_POSITION;
     
@@ -40,7 +41,7 @@ private:
     ofxCvGrayscaleImage bri;
     ofxCvGrayscaleImage filtered;
     ofxCvContourFinder contours;
-    
+        
     int w = 640;
     int h = 480;
     int drawW = 320;

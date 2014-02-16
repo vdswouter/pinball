@@ -35,6 +35,9 @@ void AppControls::setup(ColorTracking * colorTracking){
 }
 
 void AppControls::update(){
+    vector<ofPoint> projectionBoundsPrev = projectionBounds;
+    vector<ofPoint> videoBoundsPrev = videoBounds;
+    
     projectionBounds[0].x = ULProjectionslider->x;
     projectionBounds[0].y = ULProjectionslider->y;
     projectionBounds[1].x = URProjectionslider->x;
@@ -52,6 +55,13 @@ void AppControls::update(){
     videoBounds[2].y = DRVideoslider->y;
     videoBounds[3].x = DLVideoslider->x;
     videoBounds[3].y = DLVideoslider->y;
+    
+    if (projectionBoundsPrev != projectionBounds) {
+        ofNotifyEvent(NEW_PROJECTIONBOUNDS);
+    }
+    if (videoBoundsPrev != videoBounds) {
+        ofNotifyEvent(NEW_VIDEOBOUNDS);
+    }
 }
 
 void AppControls::setMaximums(int w, int h){
@@ -75,4 +85,5 @@ void AppControls::draw(){
             ofCircle(videoControls.getPosition().x + videoBounds[i].x, videoControls.getPosition().y + videoControls.getHeight() + 10 + videoBounds[i].y, 3);
         }
     }
+    
 }
