@@ -11,6 +11,7 @@
 
 #include "ofMain.h"
 #include "ofxOpenCv.h"
+#include "ofxKinect.h"
 
 class ColorTracking {
     
@@ -32,8 +33,10 @@ public:
     
     ofVec2f getVideoDimensions();
     ofxCvColorImage rgb;
-
-private:
+    
+    bool useKinect = true;
+    ofxKinect kinect;
+private:    
     ofVideoGrabber video;
     ofxCvColorImage hsb;
     ofxCvGrayscaleImage hue;

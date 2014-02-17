@@ -3,8 +3,9 @@
 //--------------------------------------------------------------
 void pinBall::setup(){
     ofEnableSmoothing();
-    ofSetBackgroundColor(0, 0, 0);
     ofSetFrameRate(60);
+    ofSetBackgroundColor(0, 0, 0);
+
     
     //set the screenspace
     ofPoint screenspacetopleft = ofPoint(fieldX,fieldY);
@@ -48,6 +49,10 @@ void pinBall::update(){
 
 //--------------------------------------------------------------
 void pinBall::draw(){
+    ofSetColor(0);
+    ofRect(0, 0, ofGetWidth(), ofGetHeight());
+    ofSetColor(255);
+    
     frameBuffer.begin();
     {
         ofClear(255, 255, 255,0);

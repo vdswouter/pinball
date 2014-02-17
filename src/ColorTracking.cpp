@@ -9,7 +9,11 @@
 #include "ColorTracking.h"
 
 void ColorTracking::setup(){
-    video.initGrabber(w, h, true);
+    if (useKinect) {
+        kinect.init();
+    }else{
+        video.initGrabber(w, h, true);
+    }
     
     rgb.allocate(w, h);
     hsb.allocate(w, h);
@@ -22,26 +26,48 @@ void ColorTracking::setup(){
 }
 
 void ColorTracking::update(){
-    video.update();
-    
-    if (video.isFrameNew()) {
-        rgb.setFromPixels(video.getPixels(),w,h);
-        rgb.mirror(false, true);
-        hsb = rgb;
-        hsb.convertRgbToHsv();
-        hsb.convertToGrayscalePlanarImages(hue, sat, bri);
-        for (int i=0; i < w*h; i++) {
-            filtered.getPixels()[i] = ofInRange(hue.getPixels()[i], findHue-tolerance, findHue+tolerance) ? 255 : 0;
-        }
-        filtered.flagImageChanged();
+    if (useKinect) {
+        kinect.update();
         
-        contours.findContours(filtered, minArea, maxArea, 1, false);
-        if (contours.nBlobs == 1) {
-            BallPosition = contours.blobs[0].centroid;
-            ofNotifyEvent(NEW_POSITION);
+        if (kinect.isFrameNew()) {
+            rgb.setFromPixels(kinect.getPixels(),w,h);
+            rgb.mirror(false, true);
+            hsb = rgb;
+            hsb.convertRgbToHsv();
+            hsb.convertToGrayscalePlanarImages(hue, sat, bri);
+            for (int i=0; i < w*h; i++) {
+                filtered.getPixels()[i] = ofInRange(hue.getPixels()[i], findHue-tolerance, findHue+tolerance) ? 255 : 0;
+            }
+            filtered.flagImageChanged();
+            
+            contours.findContours(filtered, minArea, maxArea, 1, false);
+            if (contours.nBlobs == 1) {
+                BallPosition = contours.blobs[0].centroid;
+                ofNotifyEvent(NEW_POSITION);
+            }
+        }
+    }else{
+        video.update();
+        
+        if (video.isFrameNew()) {
+            rgb.setFromPixels(video.getPixels(),w,h);
+            rgb.mirror(false, true);
+            hsb = rgb;
+            hsb.convertRgbToHsv();
+            hsb.convertToGrayscalePlanarImages(hue, sat, bri);
+            for (int i=0; i < w*h; i++) {
+                filtered.getPixels()[i] = ofInRange(hue.getPixels()[i], findHue-tolerance, findHue+tolerance) ? 255 : 0;
+            }
+            filtered.flagImageChanged();
+            
+            contours.findContours(filtered, minArea, maxArea, 1, false);
+            if (contours.nBlobs == 1) {
+                BallPosition = contours.blobs[0].centroid;
+                ofNotifyEvent(NEW_POSITION);
+            }
         }
     }
-
+    
 }
 
 void ColorTracking::draw(){

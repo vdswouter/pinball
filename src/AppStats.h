@@ -31,11 +31,12 @@ private:
     ofxIntSlider toleranceSlider;
     ofxIntSlider minAreaSlider;
     ofxIntSlider maxAreaSlider;
+    ofxIntSlider kinectAngleSlider;
     ofxButton btnSetColor;
     
     void setTolerance(int & val);
     void setColorHandler();
-    
+    void setKinectAngle(int & kinect);
 };
 
 #endif

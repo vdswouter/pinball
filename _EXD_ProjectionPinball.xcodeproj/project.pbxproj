@@ -795,9 +795,9 @@
 			isa = PBXGroup;
 			children = (
 				6CEDA5D618AD64EB004D480A /* GameControls.h */,
-				6CEDA5D518AD64EB004D480A /* GameControls.cpp */,
 				6CC9432D18AA481E001914D3 /* AppControls.h */,
 				6CC9432E18AA4952001914D3 /* AppControls.cpp */,
+				6CEDA5D518AD64EB004D480A /* GameControls.cpp */,
 				6CC9433018AA4DD5001914D3 /* AppStats.h */,
 				6CC9433118AA4DE1001914D3 /* AppStats.cpp */,
 			);

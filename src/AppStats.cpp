@@ -25,8 +25,12 @@ void AppStats::setup(ColorTracking *colorTrackingClass){
     minAreaSlider.addListener(this, &AppStats::setTolerance);
     maxAreaSlider.addListener(this, &AppStats::setTolerance);
     btnSetColor.addListener(this, &AppStats::setColorHandler);
+    kinectAngleSlider.addListener(this, &AppStats::setKinectAngle);
     
     videoDataPanel.setup();
+    if(ct->useKinect){
+        videoDataPanel.add(kinectAngleSlider.setup("Kinect Angle", ct->kinect.getCurrentCameraTiltAngle(), -30, 30));
+    }
     videoDataPanel.add(toleranceSlider.setup("ColorTolerance", ct->tolerance, 0, 30));
     videoDataPanel.add(minAreaSlider.setup("Minimum ball Area", 500, 0, 5000));
     videoDataPanel.add(maxAreaSlider.setup("Maximum ball Area", 10000, 0, 20000));
@@ -53,6 +57,10 @@ void AppStats::draw(){
             ofEllipse(FPSui.getPosition().x+i, FPSui.getPosition().y + FPSui.getHeight() + (60-fpshistory[i]), 2, 2);
         }
     }
+}
+
+void AppStats::setKinectAngle(int & angle){
+    ct->kinect.setCameraTiltAngle(angle);
 }
 
 void AppStats::setTolerance(int & val){
