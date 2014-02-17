@@ -1,17 +1,17 @@
 #include "pinballGame.h"
 
-void pinballGame::setup() {
-    ofSetFrameRate(60);
-    ofSetCircleResolution(64);
+void pinballGame::setup(int w, int h, GameControls *gc) {
+    controls = gc;
+    playFieldWidth = w;
+    playFieldHeight = h;
     
-    _playfield = new Playfield();
+    _playfield = new Playfield(playFieldWidth, playFieldHeight);
     
-    _ball = new Ball(ofGetMouseX(), ofGetMouseY());
+    _ball = new Ball(0, 0);
     
-    _holes.push_back(new Hole(280, 680));
-    _holes.push_back(new Hole(480, 70));
-    _holes.push_back(new Hole(720, 130));
-    _holes.push_back(new Hole(860, 380));
+    for (int i = 0; i < controls->holePositions.size(); i++) {
+        _holes.push_back(new Hole(controls->holePositions[i].x,controls->holePositions[i].y, controls->holeRadius));
+    }
 }
 
 //--------------------------------------------------------------
@@ -20,7 +20,7 @@ void pinballGame::update() {
 
     if (!_playfield->isDefeated()) {
         for (int i = 0; i < _holes.size(); i++) {
-            _holes[i]->update();
+            _holes[i]->update(controls->holePositions[i].x,controls->holePositions[i].y);
             
             if (_holes[i]->isActive() && _ball->detectCircularHit(_holes[i])) {
                 _playfield->conquer(0.1);
@@ -34,8 +34,9 @@ void pinballGame::update() {
 //--------------------------------------------------------------
 void pinballGame::draw() {
     if (_playfield->isDefeated()) {
+        // YOU LOSE
         ofSetColor(125, 25, 125);
-        ofRect(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
+        ofRect(0, 0, playFieldWidth, playFieldHeight);
     } else {
         _playfield->draw();
         
@@ -47,47 +48,6 @@ void pinballGame::draw() {
     }
 }
 
-//--------------------------------------------------------------
-void pinballGame::keyPressed(int key) {
-    
-}
-
-//--------------------------------------------------------------
-void pinballGame::keyReleased(int key) {
-    
-}
-
-//--------------------------------------------------------------
-void pinballGame::mouseMoved(int x, int y ) {
+void pinballGame::setPosition(int x, int y ) {
     _ball->setPosition(x, y);
-}
-
-//--------------------------------------------------------------
-void pinballGame::mouseDragged(int x, int y, int button) {
-    
-}
-
-//--------------------------------------------------------------
-void pinballGame::mousePressed(int x, int y, int button) {
-    
-}
-
-//--------------------------------------------------------------
-void pinballGame::mouseReleased(int x, int y, int button) {
-    
-}
-
-//--------------------------------------------------------------
-void pinballGame::windowResized(int w, int h) {
-    
-}
-
-//--------------------------------------------------------------
-void pinballGame::gotMessage(ofMessage msg) {
-    
-}
-
-//--------------------------------------------------------------
-void pinballGame::dragEvent(ofDragInfo dragInfo) {
-    
 }

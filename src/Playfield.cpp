@@ -1,6 +1,8 @@
 #include "Playfield.h"
 
-Playfield::Playfield() {
+Playfield::Playfield(int w, int h) {
+    width = w;
+    height = h;
     ofLog() << "[PLAYFIELD] Constructor";
     _conquered = .5;
 }
@@ -10,9 +12,6 @@ void Playfield::update() {
 }
 
 void Playfield::draw() {
-    int width = ofGetWindowWidth();
-    int height = ofGetWindowHeight();
-
     // Draw main playground
     ofSetColor(200, 30, 75);
     ofRect(0, 0, width, height);

@@ -6,9 +6,11 @@ Hole::Hole(int x, int y, int radius) : PositionedCircle::PositionedCircle(x, y, 
     _resetAfter = 0;
 }
 
-void Hole::update() {
+void Hole::update(int x, int y) {
     if (_resetAfter > 0 && ofGetElapsedTimeMillis() - _resetTimestamp > _resetAfter) {
         this->setActive(!_isActive, 0);
+        _x = x;
+        _y = y;
     }
 }
 

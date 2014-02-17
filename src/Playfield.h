@@ -5,7 +5,7 @@
 class Playfield {
     
     public:
-        Playfield();
+        Playfield(int w, int h);
         void update();
         void draw();
         void conquer(float points);
@@ -14,5 +14,7 @@ class Playfield {
     
     private:
         float _conquered;
+        int width;
+        int height;
 };
 

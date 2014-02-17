@@ -14,7 +14,7 @@
 class GameControls {
     
 public:
-    void setup();
+    void setup(int w, int h);
     void update();
     void draw();
     

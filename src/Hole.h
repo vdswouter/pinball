@@ -7,7 +7,7 @@ class Hole : public PositionedCircle {
     
     public:
         explicit Hole(int x, int y, int radius = 22);
-        void update();
+        void update(int x, int y);
         void draw();
         void setActive(bool isActive, int resetAfter = 0);
         bool isActive();

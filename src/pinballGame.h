@@ -4,25 +4,22 @@
 #include "Playfield.h"
 #include "Hole.h"
 #include "Ball.h"
+#include "GameControls.h"
 
-class pinballGame : public ofBaseApp {
+class pinballGame {
     
     public:
-        void setup();
+        void setup(int w, int h, GameControls *gc);
         void update();
         void draw();
     
-        void keyPressed(int key);
-        void keyReleased(int key);
-        void mouseMoved(int x, int y );
-        void mouseDragged(int x, int y, int button);
-        void mousePressed(int x, int y, int button);
-        void mouseReleased(int x, int y, int button);
-        void windowResized(int w, int h);
-        void dragEvent(ofDragInfo dragInfo);
-        void gotMessage(ofMessage msg);
+        void setPosition(int x, int y );
 
     private:
+        GameControls *controls;
+        int playFieldWidth;
+        int playFieldHeight;
+    
         Playfield *_playfield;
         Ball *_ball;
         vector<Hole *> _holes;

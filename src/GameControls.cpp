@@ -8,19 +8,19 @@
 
 #include "GameControls.h"
 
-void GameControls::setup(){
+void GameControls::setup(int w, int h){
     for (int i = 0; i < 6; i++) {
         holePositions.push_back(ofPoint(0,0));
     }
     
     holesControls.setup();
     holesControls.setName("Holes Positions");
-    holesControls.add(hole1slider.setup("Hole 1", ofVec2f(0, 0), ofVec2f(0, 0), ofVec2f(ofGetWidth(), ofGetHeight())));
-    holesControls.add(hole2slider.setup("Hole 2", ofVec2f(0, ofGetHeight()), ofVec2f(0, 0), ofVec2f(ofGetWidth(), ofGetHeight())));
-    holesControls.add(hole3slider.setup("Hole 3", ofVec2f(ofGetWidth(), 0), ofVec2f(0, 0), ofVec2f(ofGetWidth(), ofGetHeight())));
-    holesControls.add(hole4slider.setup("Hole 4", ofVec2f(ofGetWidth(), ofGetHeight()), ofVec2f(0,0), ofVec2f(ofGetWidth(), ofGetHeight())));
-    holesControls.add(hole5slider.setup("Hole 5", ofVec2f(ofGetWidth(), ofGetHeight()), ofVec2f(0,0), ofVec2f(ofGetWidth(), ofGetHeight())));
-    holesControls.add(hole6slider.setup("Hole 6", ofVec2f(ofGetWidth(), ofGetHeight()), ofVec2f(0,0), ofVec2f(ofGetWidth(), ofGetHeight())));
+    holesControls.add(hole1slider.setup("Hole 1", ofVec2f(50, 50), ofVec2f(0, 0), ofVec2f(w, h)));
+    holesControls.add(hole2slider.setup("Hole 2", ofVec2f(100, 100), ofVec2f(0, 0), ofVec2f(w, h)));
+    holesControls.add(hole3slider.setup("Hole 3", ofVec2f(150, 150), ofVec2f(0, 0), ofVec2f(w, h)));
+    holesControls.add(hole4slider.setup("Hole 4", ofVec2f(200, 200), ofVec2f(0,0), ofVec2f(w, h)));
+    holesControls.add(hole5slider.setup("Hole 5", ofVec2f(250, 250), ofVec2f(0,0), ofVec2f(w, h)));
+    holesControls.add(hole6slider.setup("Hole 6", ofVec2f(300, 300), ofVec2f(0,0), ofVec2f(w, h)));
     holesControls.add(holeRadiusSlider.setup("Radius", 50, 0, 200));
 
 }

@@ -637,12 +637,12 @@
 		6C18166118B111C000138076 /* graphics */ = {
 			isa = PBXGroup;
 			children = (
+				6C303C1618B272AA001F70F8 /* pinballGame.h */,
+				6C303C1518B272AA001F70F8 /* pinballGame.cpp */,
 				6C303C1118B272AA001F70F8 /* Ball.cpp */,
 				6C303C1218B272AA001F70F8 /* Ball.h */,
 				6C303C1318B272AA001F70F8 /* Hole.cpp */,
 				6C303C1418B272AA001F70F8 /* Hole.h */,
-				6C303C1518B272AA001F70F8 /* pinballGame.cpp */,
-				6C303C1618B272AA001F70F8 /* pinballGame.h */,
 				6C303C1718B272AA001F70F8 /* Playfield.cpp */,
 				6C303C1818B272AA001F70F8 /* Playfield.h */,
 				6C303C1918B272AA001F70F8 /* PositionedCircle.cpp */,
@@ -824,9 +824,9 @@
 		6CEDA5D418AD6271004D480A /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				6CEDA5D618AD64EB004D480A /* GameControls.h */,
 				6CC9432D18AA481E001914D3 /* AppControls.h */,
 				6CC9432E18AA4952001914D3 /* AppControls.cpp */,
+				6CEDA5D618AD64EB004D480A /* GameControls.h */,
 				6CEDA5D518AD64EB004D480A /* GameControls.cpp */,
 				6CC9433018AA4DD5001914D3 /* AppStats.h */,
 				6CC9433118AA4DE1001914D3 /* AppStats.cpp */,

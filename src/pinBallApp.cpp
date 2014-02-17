@@ -5,7 +5,7 @@ void pinBall::setup(){
     ofEnableSmoothing();
     ofSetFrameRate(60);
     ofSetBackgroundColor(0, 0, 0);
-
+    ofSetCircleResolution(64);
     
     //set the screenspace
     ofPoint screenspacetopleft = ofPoint(fieldX,fieldY);
@@ -30,10 +30,10 @@ void pinBall::setup(){
 
     stats.setup(& colorTr);
     appControls.setup(& colorTr);
-    gameControls.setup();
+    gameControls.setup(fieldWidth, fieldHeight);
     
     testGraphics.setup();
-    game.setup();
+    game.setup(fieldWidth, fieldHeight, & gameControls);
 }
 
 //--------------------------------------------------------------
@@ -86,7 +86,7 @@ void pinBall::draw(){
     }
     if (showInfo) {
         ofSetColor(0);
-        ofRect(20, ofGetHeight() - 100, 500, 80);
+        ofRect(20, ofGetHeight() - 100, 500, 90);
         ofSetColor(255);
         ofDrawBitmapString("Press V to show/hide Video Controls\nPress M to show/hide Mapping Controls\nPress G to show Game Controls\nPress I to show/hide this window \nPress F to toggle fullscreen mode \nPress S to start the game", 25, ofGetHeight()-85);
     }
@@ -117,6 +117,7 @@ void pinBall::newPoint(){
     colorTr.BallPositionMapped = videoMatrix.preMult(ofVec3f(colorTr.BallPosition));
     //SEND THE DATA TO THE DRAW CLASS
     testGraphics.setPosition(colorTr.BallPositionMapped.x, colorTr.BallPositionMapped.y);
+    game.setPosition(colorTr.BallPositionMapped.x, colorTr.BallPositionMapped.y);
 }
 
 //--------------------------------------------------------------
