@@ -7,6 +7,7 @@
 #include "ColorTracking.h"
 #include "ofxQuadWarp.h"
 #include "testGraphics.h"
+#include "pinballGame.h"
 
 class pinBall : public ofBaseApp{
 
@@ -50,6 +51,7 @@ private:
     GameControls gameControls;
     
     testGraphics testGraphics;
+    pinballGame game;
     
     void newPoint();
     void newVideoBounds();

@@ -33,7 +33,7 @@ void pinBall::setup(){
     gameControls.setup();
     
     testGraphics.setup();
-    
+    game.setup();
 }
 
 //--------------------------------------------------------------
@@ -45,6 +45,7 @@ void pinBall::update(){
     colorTr.update();
     
     testGraphics.update();
+    game.update();
 }
 
 //--------------------------------------------------------------
@@ -60,7 +61,8 @@ void pinBall::draw(){
         ofRect(fieldX, fieldY, fieldWidth, fieldHeight);
         ofSetColor(255, 0, 0);
         ofCircle(colorTr.BallPositionMapped.x, colorTr.BallPositionMapped.y, 8);
-        testGraphics.draw();
+//        testGraphics.draw();
+        game.draw();
         ofSetColor(255);
     }
     frameBuffer.end();
@@ -86,7 +88,7 @@ void pinBall::draw(){
         ofSetColor(0);
         ofRect(20, ofGetHeight() - 100, 500, 80);
         ofSetColor(255);
-        ofDrawBitmapString("Press V to show/hide Video Controls\nPress M to show/hide Mapping Controls\nPress G to show Game Controls\nPress I to show/hide this window", 25, ofGetHeight()-85);
+        ofDrawBitmapString("Press V to show/hide Video Controls\nPress M to show/hide Mapping Controls\nPress G to show Game Controls\nPress I to show/hide this window \nPress F to toggle fullscreen mode \nPress S to start the game", 25, ofGetHeight()-85);
     }
 
 }

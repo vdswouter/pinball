@@ -23,6 +23,12 @@
 		67FE4C7B15C2F0478C8126C2 /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B361208CD4107E479F04E7B /* NetworkingUtils.cpp */; };
 		686B0DF6249B52E1A85B39EC /* ofxKinect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ED9FFC7D08DA194C2CE7D09 /* ofxKinect.cpp */; };
 		6C18166518B111F700138076 /* testGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C18166318B111F700138076 /* testGraphics.cpp */; };
+		6C303C1D18B272AA001F70F8 /* Ball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C303C1118B272AA001F70F8 /* Ball.cpp */; };
+		6C303C1E18B272AA001F70F8 /* Hole.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C303C1318B272AA001F70F8 /* Hole.cpp */; };
+		6C303C1F18B272AA001F70F8 /* pinballGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C303C1518B272AA001F70F8 /* pinballGame.cpp */; };
+		6C303C2018B272AA001F70F8 /* Playfield.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C303C1718B272AA001F70F8 /* Playfield.cpp */; };
+		6C303C2118B272AA001F70F8 /* PositionedCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C303C1918B272AA001F70F8 /* PositionedCircle.cpp */; };
+		6C303C2218B272AA001F70F8 /* PositionedObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C303C1B18B272AA001F70F8 /* PositionedObject.cpp */; };
 		6C5148AC18B0E0C000F37967 /* ofxQuadWarp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C5148A618B0E0C000F37967 /* ofxQuadWarp.cpp */; };
 		6C5148B718B0E0CA00F37967 /* ofxMSAInteractiveObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C5148B518B0E0CA00F37967 /* ofxMSAInteractiveObject.cpp */; };
 		6CC9432F18AA4952001914D3 /* AppControls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CC9432E18AA4952001914D3 /* AppControls.cpp */; };
@@ -163,6 +169,18 @@
 		6B907CFBB1B0FEDE76C41AA0 /* heap.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = heap.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/heap.h; sourceTree = SOURCE_ROOT; };
 		6C18166318B111F700138076 /* testGraphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testGraphics.cpp; sourceTree = "<group>"; };
 		6C18166418B111F700138076 /* testGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testGraphics.h; sourceTree = "<group>"; };
+		6C303C1118B272AA001F70F8 /* Ball.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ball.cpp; sourceTree = "<group>"; };
+		6C303C1218B272AA001F70F8 /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
+		6C303C1318B272AA001F70F8 /* Hole.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hole.cpp; sourceTree = "<group>"; };
+		6C303C1418B272AA001F70F8 /* Hole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hole.h; sourceTree = "<group>"; };
+		6C303C1518B272AA001F70F8 /* pinballGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pinballGame.cpp; sourceTree = "<group>"; };
+		6C303C1618B272AA001F70F8 /* pinballGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinballGame.h; sourceTree = "<group>"; };
+		6C303C1718B272AA001F70F8 /* Playfield.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Playfield.cpp; sourceTree = "<group>"; };
+		6C303C1818B272AA001F70F8 /* Playfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Playfield.h; sourceTree = "<group>"; };
+		6C303C1918B272AA001F70F8 /* PositionedCircle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PositionedCircle.cpp; sourceTree = "<group>"; };
+		6C303C1A18B272AA001F70F8 /* PositionedCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionedCircle.h; sourceTree = "<group>"; };
+		6C303C1B18B272AA001F70F8 /* PositionedObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PositionedObject.cpp; sourceTree = "<group>"; };
+		6C303C1C18B272AA001F70F8 /* PositionedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionedObject.h; sourceTree = "<group>"; };
 		6C5148A418B0E0C000F37967 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		6C5148A618B0E0C000F37967 /* ofxQuadWarp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxQuadWarp.cpp; sourceTree = "<group>"; };
 		6C5148A718B0E0C000F37967 /* ofxQuadWarp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxQuadWarp.h; sourceTree = "<group>"; };
@@ -619,6 +637,18 @@
 		6C18166118B111C000138076 /* graphics */ = {
 			isa = PBXGroup;
 			children = (
+				6C303C1118B272AA001F70F8 /* Ball.cpp */,
+				6C303C1218B272AA001F70F8 /* Ball.h */,
+				6C303C1318B272AA001F70F8 /* Hole.cpp */,
+				6C303C1418B272AA001F70F8 /* Hole.h */,
+				6C303C1518B272AA001F70F8 /* pinballGame.cpp */,
+				6C303C1618B272AA001F70F8 /* pinballGame.h */,
+				6C303C1718B272AA001F70F8 /* Playfield.cpp */,
+				6C303C1818B272AA001F70F8 /* Playfield.h */,
+				6C303C1918B272AA001F70F8 /* PositionedCircle.cpp */,
+				6C303C1A18B272AA001F70F8 /* PositionedCircle.h */,
+				6C303C1B18B272AA001F70F8 /* PositionedObject.cpp */,
+				6C303C1C18B272AA001F70F8 /* PositionedObject.h */,
 				6C18166318B111F700138076 /* testGraphics.cpp */,
 				6C18166418B111F700138076 /* testGraphics.h */,
 			);
@@ -1272,6 +1302,7 @@
 				E4B69E210A3A1BDC003C02F2 /* pinBallApp.cpp in Sources */,
 				686B0DF6249B52E1A85B39EC /* ofxKinect.cpp in Sources */,
 				ACE7DC9A3223ED5EE1B80074 /* cameras.c in Sources */,
+				6C303C1D18B272AA001F70F8 /* Ball.cpp in Sources */,
 				6CEDA5DC18AD957E004D480A /* ColorTracking.cpp in Sources */,
 				F4135EEFC911E9ED211FB6F9 /* core.c in Sources */,
 				6CEDA5D218AC065F004D480A /* ofxToggle.cpp in Sources */,
@@ -1295,6 +1326,8 @@
 				6C5148B718B0E0CA00F37967 /* ofxMSAInteractiveObject.cpp in Sources */,
 				6C5148AC18B0E0C000F37967 /* ofxQuadWarp.cpp in Sources */,
 				D3301F6A0B43BB293ED97C1D /* ofxCvShortImage.cpp in Sources */,
+				6C303C1F18B272AA001F70F8 /* pinballGame.cpp in Sources */,
+				6C303C2118B272AA001F70F8 /* PositionedCircle.cpp in Sources */,
 				72A929D3561B8232A182ABFC /* ofxOscBundle.cpp in Sources */,
 				5864AD82E20F15536D054EA3 /* ofxOscMessage.cpp in Sources */,
 				4ADB88E2FB52E76A471065DE /* ofxOscParameterSync.cpp in Sources */,
@@ -1308,6 +1341,7 @@
 				67FE4C7B15C2F0478C8126C2 /* NetworkingUtils.cpp in Sources */,
 				510CAFE035E576A4E1502D52 /* UdpSocket.cpp in Sources */,
 				A29D8C96AE042ECEAA1BD4F3 /* NetworkingUtilsWin.cpp in Sources */,
+				6C303C1E18B272AA001F70F8 /* Hole.cpp in Sources */,
 				28090DEB5109115003E8F1C5 /* UdpSocketWin.cpp in Sources */,
 				62545D179C94265CA1389D4A /* OscOutboundPacketStream.cpp in Sources */,
 				C4782ECC372420ACE0615B74 /* OscPrintReceivedElements.cpp in Sources */,
@@ -1318,6 +1352,8 @@
 				6CEDA5CB18AC065F004D480A /* ofxBaseGui.cpp in Sources */,
 				BFADD8A52F55A1D2D9C789AC /* ofxParticleSystem.cpp in Sources */,
 				6C18166518B111F700138076 /* testGraphics.cpp in Sources */,
+				6C303C2218B272AA001F70F8 /* PositionedObject.cpp in Sources */,
+				6C303C2018B272AA001F70F8 /* Playfield.cpp in Sources */,
 				6CEDA5CC18AC065F004D480A /* ofxButton.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
