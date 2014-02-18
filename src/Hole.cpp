@@ -6,9 +6,10 @@ Hole::Hole(int x, int y, int radius) : PositionedCircle::PositionedCircle(x, y, 
     _resetAfter = 0;
 }
 
-void Hole::update(int x, int y) {
+void Hole::update(int x, int y, int radius) {
     _x = x;
     _y = y;
+    setRadius(radius);
     if (_resetAfter > 0 && ofGetElapsedTimeMillis() - _resetTimestamp > _resetAfter) {
         this->setActive(!_isActive, 0);
 
@@ -17,7 +18,7 @@ void Hole::update(int x, int y) {
 
 void Hole::draw() {
     if (_isActive) {
-        ofSetColor(255);
+        ofSetColor(0,0,0,30);
         ofCircle(_x, _y, _radius);
     }
 }

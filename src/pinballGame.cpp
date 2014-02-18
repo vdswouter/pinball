@@ -22,7 +22,7 @@ void pinballGame::update() {
 
     if (!_playfield->isDefeated()) {
         for (int i = 0; i < _holes.size(); i++) {
-            _holes[i]->update(controls->holePositions[i].x,controls->holePositions[i].y);
+            _holes[i]->update(controls->holePositions[i].x,controls->holePositions[i].y, controls->holeRadius);
             
             if (_holes[i]->isActive() && _ball->detectCircularHit(_holes[i])) {
                 _playfield->conquer(0.1);

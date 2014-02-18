@@ -19,7 +19,7 @@ public:
     void draw();
     
     vector<ofPoint> holePositions;
-    int holeRadius = 50;
+    int holeRadius = 20;
     
 private:
     ofxPanel holesControls;

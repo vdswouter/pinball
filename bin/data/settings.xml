@@ -4,4 +4,11 @@
 	<Projection_UP_RIGHT>698.776, 710.531</Projection_UP_RIGHT>
 	<Projection_DOWN_RIGHT>724.898, 470.204</Projection_DOWN_RIGHT>
 <group/>
+<Projection_Coords>
+		<UP_LEFT>1018.78, 79.5918</UP_LEFT>
+		<UP_RIGHT>1743.67, 73.4694</UP_RIGHT>
+		<DOWN_RIGHT>1733.88, 1065.31</DOWN_RIGHT>
+		<DOWN_LEFT>1008.98, 1065.31</DOWN_LEFT>
+		<Hide_Video_Controls>0</Hide_Video_Controls>
+	</Projection_Coords>
 </group>
