@@ -8,7 +8,7 @@ Playfield::Playfield(int w, int h) {
 }
 
 void Playfield::update() {
-    _conquered -= .01;
+    _conquered -= .0005;
 }
 
 void Playfield::draw() {
@@ -18,8 +18,7 @@ void Playfield::draw() {
     
     // Draw conquered
     ofSetColor(25, 125, 255);
-    ofRect(0, 0, width * _conquered, height);
-    ofLogNotice() << "_Conquered: " << _conquered;
+    ofRect(0, height - height * _conquered, width, height * _conquered);
 }
 
 void Playfield::conquer(float points) {

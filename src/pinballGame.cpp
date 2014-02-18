@@ -44,6 +44,7 @@ void pinballGame::draw() {
         
         for (int i = 0; i < _holes.size(); i++) {
             _holes[i]->draw();
+            ofLogNotice() << _holes[i]->radius();
         }
         
         _ball->x();
