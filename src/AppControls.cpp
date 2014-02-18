@@ -15,6 +15,7 @@ void AppControls::setup(ColorTracking * colorTracking){
         projectionBounds.push_back(ofPoint(0,0));
     }
     
+    DimProjectionSlider.addListener(this, &AppControls::DimProjectionSliderHandler);
     projectionControls.setup();
     projectionControls.setName("Projection Coords");
     projectionControls.add(ULProjectionslider.setup("UP LEFT", ofVec2f(0, 0), ofVec2f(0, 0), ofVec2f(ofGetWidth(), ofGetHeight())));
@@ -22,6 +23,7 @@ void AppControls::setup(ColorTracking * colorTracking){
     projectionControls.add(DRProjectionslider.setup("DOWN RIGHT", ofVec2f(ofGetWidth(), ofGetHeight()), ofVec2f(0,0), ofVec2f(ofGetWidth(), ofGetHeight())));
     projectionControls.add(DLProjectionslider.setup("DOWN LEFT", ofVec2f(0, ofGetHeight()), ofVec2f(0, 0), ofVec2f(ofGetWidth(), ofGetHeight())));
     projectionControls.add(btnHideVideoControls.setup("Hide Video Controls", false));
+    projectionControls.add(DimProjectionSlider.setup("Projection Dim", 0, 0, 100));
     
     ofVec2f vid = ct->getVideoDimensions();
     videoControls.setup();
@@ -65,6 +67,10 @@ void AppControls::update(){
 }
 
 void AppControls::setMaximums(int w, int h){
+}
+
+void AppControls::DimProjectionSliderHandler(int &dim){
+    projectionDim = dim/100.0f;
 }
 
 void AppControls::draw(){

@@ -90,6 +90,11 @@ void pinBall::draw(){
         ofSetColor(255);
         ofDrawBitmapString("Press V to show/hide Video Controls\nPress M to show/hide Mapping Controls\nPress G to show Game Controls\nPress I to show/hide this window \nPress F to toggle fullscreen mode \nPress S to start the game", 25, ofGetHeight()-85);
     }
+    
+    //to dim the projection:
+    ofSetColor(0, 0, 0, appControls.projectionDim * 255);
+    ofRect(0, 0, ofGetWidth(), ofGetHeight());
+    ofSetColor(255);
 
 }
 void pinBall::newProjectionBounds(){

@@ -34,7 +34,7 @@ public:
     ofVec2f getVideoDimensions();
     ofxCvColorImage rgb;
     
-    bool useKinect = false;
+    bool useKinect = true;
     ofxKinect kinect;
 private:    
     ofVideoGrabber video;

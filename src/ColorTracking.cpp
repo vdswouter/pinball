@@ -31,7 +31,7 @@ void ColorTracking::update(){
         
         if (kinect.isFrameNew()) {
             rgb.setFromPixels(kinect.getPixels(),w,h);
-            rgb.mirror(false, true);
+            rgb.mirror(false, false);
             hsb = rgb;
             hsb.convertRgbToHsv();
             hsb.convertToGrayscalePlanarImages(hue, sat, bri);

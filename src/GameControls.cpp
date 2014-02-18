@@ -22,6 +22,7 @@ void GameControls::setup(int w, int h){
     holesControls.add(hole5slider.setup("Hole 5", ofVec2f(250, 250), ofVec2f(0,0), ofVec2f(w, h)));
     holesControls.add(hole6slider.setup("Hole 6", ofVec2f(300, 300), ofVec2f(0,0), ofVec2f(w, h)));
     holesControls.add(holeRadiusSlider.setup("Radius", holeRadius, 0, 200));
+    holesControls.add(ballRadiusSlider.setup("Ball Radius", ballRadius, 0, 100));
     holesControls.add(speedSlider.setup("speed", speed, 0, 10));
 
 }
@@ -40,6 +41,7 @@ void GameControls::update(){
     holePositions[5].x = hole6slider->x;
     holePositions[5].y = hole6slider->y;
     holeRadius = holeRadiusSlider.value;
+    ballRadius = ballRadiusSlider.value;
     speed = speedSlider.value;
     
 }

@@ -20,6 +20,7 @@ void pinballGame::setup(int w, int h, GameControls *gc) {
 void pinballGame::update() {
     _playfield->update();
     _playfield->conquerspeed = controls->speed;
+    _ball->setRadius(controls->ballRadius);
 
     if (!_playfield->isDefeated()) {
         for (int i = 0; i < _holes.size(); i++) {
@@ -46,8 +47,6 @@ void pinballGame::draw() {
         for (int i = 0; i < _holes.size(); i++) {
             _holes[i]->draw();
         }
-        
-        _ball->x();
         _ball->draw();
     }
 }

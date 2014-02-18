@@ -18,8 +18,9 @@ void Ball::draw() {
         }
     }
     
-    ofSetColor(255, 255, 255);
+    ofSetColor(0);
     ofCircle(_x, _y, _radius);
+    ofSetColor(255);
 }
 
 void Ball::setPosition(int x, int y) {

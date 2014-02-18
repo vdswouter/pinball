@@ -22,6 +22,7 @@ public:
     
     vector<ofPoint> videoBounds;
     vector<ofPoint> projectionBounds;
+    float projectionDim = 0;
     
     ofEvent<void> NEW_PROJECTIONBOUNDS;
     ofEvent<void> NEW_VIDEOBOUNDS;
@@ -34,6 +35,8 @@ private:
     ofxVec2Slider URProjectionslider;
     ofxVec2Slider DRProjectionslider;
     ofxToggle btnHideVideoControls;
+    ofxIntSlider DimProjectionSlider;
+    void DimProjectionSliderHandler(int & dim);
     
     ofxPanel videoControls;
     ofxVec2Slider ULVideoslider;

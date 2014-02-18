@@ -5,10 +5,17 @@
 	<Projection_DOWN_RIGHT>724.898, 470.204</Projection_DOWN_RIGHT>
 <group/>
 <Projection_Coords>
-		<UP_LEFT>1018.78, 79.5918</UP_LEFT>
-		<UP_RIGHT>1743.67, 73.4694</UP_RIGHT>
-		<DOWN_RIGHT>1733.88, 1065.31</DOWN_RIGHT>
-		<DOWN_LEFT>1008.98, 1065.31</DOWN_LEFT>
+		<UP_LEFT>0, 0</UP_LEFT>
+		<UP_RIGHT>1280, 0</UP_RIGHT>
+		<DOWN_RIGHT>1280, 960</DOWN_RIGHT>
+		<DOWN_LEFT>0, 960</DOWN_LEFT>
 		<Hide_Video_Controls>0</Hide_Video_Controls>
+	<Projection_Dim>0</Projection_Dim>
 	</Projection_Coords>
+<Video_Input_Coords>
+		<UP_LEFT>195.918, 142.041</UP_LEFT>
+		<UP_RIGHT>326.531, 139.592</UP_RIGHT>
+		<DOWN_RIGHT>342.857, 345.306</DOWN_RIGHT>
+		<DOWN_LEFT>192.653, 345.306</DOWN_LEFT>
+	</Video_Input_Coords>
 </group>
