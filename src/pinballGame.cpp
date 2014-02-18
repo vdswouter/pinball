@@ -10,7 +10,9 @@ void pinballGame::setup(int w, int h, GameControls *gc) {
     _ball = new Ball(0, 0);
     
     for (int i = 0; i < controls->holePositions.size(); i++) {
-        _holes.push_back(new Hole(controls->holePositions[i].x,controls->holePositions[i].y, controls->holeRadius));
+        Hole *h = new Hole(controls->holePositions[i].x,controls->holePositions[i].y, controls->holeRadius);
+        h->setActive(true,0);
+        _holes.push_back(h);
     }
 }
 
@@ -44,6 +46,7 @@ void pinballGame::draw() {
             _holes[i]->draw();
         }
         
+        _ball->x();
         _ball->draw();
     }
 }

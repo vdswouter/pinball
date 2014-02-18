@@ -32,7 +32,7 @@ void pinBall::setup(){
     appControls.setup(& colorTr);
     gameControls.setup(fieldWidth, fieldHeight);
     
-    testGraphics.setup();
+//    testGraphics.setup();
     game.setup(fieldWidth, fieldHeight, & gameControls);
 }
 
@@ -44,7 +44,7 @@ void pinBall::update(){
     
     colorTr.update();
     
-    testGraphics.update();
+//    testGraphics.update();
     game.update();
 }
 
@@ -113,10 +113,9 @@ void pinBall::newVideoBounds(){
 }
 
 void pinBall::newPoint(){
-//    ofLogNotice() << "got event " << ofGetFrameNum();
     colorTr.BallPositionMapped = videoMatrix.preMult(ofVec3f(colorTr.BallPosition));
     //SEND THE DATA TO THE DRAW CLASS
-    testGraphics.setPosition(colorTr.BallPositionMapped.x, colorTr.BallPositionMapped.y);
+//    testGraphics.setPosition(colorTr.BallPositionMapped.x, colorTr.BallPositionMapped.y);
     game.setPosition(colorTr.BallPositionMapped.x, colorTr.BallPositionMapped.y);
 }
 
@@ -143,6 +142,9 @@ void pinBall::keyPressed(int key){
             break;
         case 'f':
             ofSetFullscreen(!ofGetWindowMode());
+            break;
+        case 's':
+            //TODO: RESTART THE GAME!
             break;
     }
 }

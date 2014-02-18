@@ -35,8 +35,8 @@ private:
     vector<ofPoint> screenspace;
     int fieldWidth = 500;
     int fieldHeight = 1000;
-    int fieldX = 100;
-    int fieldY = 20;
+    int fieldX = 0;
+    int fieldY = 0;
     
     ColorTracking colorTr;
 		
