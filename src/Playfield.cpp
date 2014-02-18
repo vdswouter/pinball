@@ -8,7 +8,7 @@ Playfield::Playfield(int w, int h) {
 }
 
 void Playfield::update() {
-    _conquered -= .0005;
+    _conquered -= conquerspeed / 3000;
 }
 
 void Playfield::draw() {

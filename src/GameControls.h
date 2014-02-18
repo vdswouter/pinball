@@ -20,6 +20,7 @@ public:
     
     vector<ofPoint> holePositions;
     int holeRadius = 20;
+    float speed = 3;
     
 private:
     ofxPanel holesControls;
@@ -30,6 +31,7 @@ private:
     ofxVec2Slider hole5slider;
     ofxVec2Slider hole6slider;
     ofxIntSlider holeRadiusSlider;
+    ofxFloatSlider speedSlider;
     
 };
 

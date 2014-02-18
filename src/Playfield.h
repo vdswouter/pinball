@@ -11,6 +11,7 @@ class Playfield {
         void conquer(float points);
         bool isDefeated();
         bool isConquered();
+        float conquerspeed;
     
     private:
         float _conquered;
