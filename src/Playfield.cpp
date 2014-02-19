@@ -13,11 +13,11 @@ void Playfield::update() {
 
 void Playfield::draw() {
     // Draw main playground
-    ofSetColor(200, 30, 75);
+    ofSetColor(234, 59, 64);
     ofRect(0, 0, width, height);
     
     // Draw conquered
-    ofSetColor(25, 125, 255);
+    ofSetColor(41, 81, 103);
     ofRect(0, height - height * _conquered, width, height * _conquered);
 }
 
@@ -44,5 +44,5 @@ bool Playfield::isConquered() {
 }
 
 void Playfield::reset() {
-    _conquered = .5;
+    _conquered = .15;
 }

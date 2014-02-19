@@ -9,11 +9,11 @@ void Ball::update() {
 
 void Ball::draw() {
     if (_track.size() > 0) {
-        ofSetColor(255, 125, 25);
+        ofSetColor(255, 255, 255);
         int i = _track.size();
-        for (int j = 0; j < 10; j++) {
-            ofPoint point = _track[i];
-            ofCircle(point.x, point.y, 4);
+        for (int j = 0; j < _track.size() && j < 20; j++) {
+            Shape s = _track[i];
+            s.draw();
             i--;
         }
     }
@@ -24,7 +24,7 @@ void Ball::draw() {
 }
 
 void Ball::setPosition(int x, int y) {
-    _track.push_back(ofPoint(x, y, 0));
+    _track.push_back(Shape(x, y));
     _x = x;
     _y = y;
 }

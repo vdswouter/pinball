@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "PositionedCircle.h"
+#include "Shape.h"
 
 class Ball : public PositionedCircle {
     
@@ -13,7 +14,7 @@ class Ball : public PositionedCircle {
         void resetTrack();
 
     private:
-        vector<ofPoint> _track;
+        vector<Shape> _track;
     
 };
 
