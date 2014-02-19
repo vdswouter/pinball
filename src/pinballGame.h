@@ -15,6 +15,8 @@ class pinballGame {
     
         void setPosition(int x, int y );
 
+        void reset();
+    
     private:
         GameControls *controls;
         int playFieldWidth;

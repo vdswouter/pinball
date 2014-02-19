@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>FA32CABF-BB02-4E1F-A1F4-8D2B80762EA7</string>
+	<string>D585C6B8-F4E2-4A77-8212-06FCD9AD10FE</string>
 	<key>IDESourceControlProjectName</key>
 	<string>_EXD_ProjectionPinball</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>4453D0E3-E5B6-4B06-BC28-B4F4DB3007E0</key>
-		<string>https://github.com/vdswouter/pinball.git</string>
+		<key>C6B04EC6-2DCD-405A-A527-16D9723D7945</key>
+		<string>https://github.com/vdswouter/pinball</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>_EXD_ProjectionPinball.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>4453D0E3-E5B6-4B06-BC28-B4F4DB3007E0</key>
+		<key>C6B04EC6-2DCD-405A-A527-16D9723D7945</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/vdswouter/pinball.git</string>
+	<string>https://github.com/vdswouter/pinball</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>4453D0E3-E5B6-4B06-BC28-B4F4DB3007E0</string>
+	<string>C6B04EC6-2DCD-405A-A527-16D9723D7945</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>4453D0E3-E5B6-4B06-BC28-B4F4DB3007E0</string>
+			<string>C6B04EC6-2DCD-405A-A527-16D9723D7945</string>
 			<key>IDESourceControlWCCName</key>
 			<string>_EXD_ProjectionPinball</string>
 		</dict>

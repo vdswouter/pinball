@@ -30,6 +30,12 @@ void pinballGame::update() {
                 _playfield->conquer(0.1);
                 _holes[i]->setActive(false, 400);
                 _ball->resetTrack();
+            } else {
+                float conqueredPx = playFieldHeight - playFieldHeight * _playfield->conquered();
+                ofLog() << i << " " << _holes[i]->y() << " " << conqueredPx;
+                if (_holes[i]->y() > conqueredPx) {
+                    _holes[i]->setActive(false);
+                }
             }
         }
     }
@@ -53,4 +59,8 @@ void pinballGame::draw() {
 
 void pinballGame::setPosition(int x, int y ) {
     _ball->setPosition(x, y);
+}
+
+void pinballGame::reset() {
+    _playfield->reset();
 }

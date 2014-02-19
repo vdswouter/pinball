@@ -12,6 +12,8 @@ class Playfield {
         bool isDefeated();
         bool isConquered();
         float conquerspeed;
+        void reset();
+        float conquered();
     
     private:
         float _conquered;

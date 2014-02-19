@@ -21,6 +21,10 @@ void Playfield::draw() {
     ofRect(0, height - height * _conquered, width, height * _conquered);
 }
 
+float Playfield::conquered() {
+    return _conquered;
+}
+
 void Playfield::conquer(float points) {
     _conquered += points;
     
@@ -37,4 +41,8 @@ bool Playfield::isDefeated() {
 
 bool Playfield::isConquered() {
     return _conquered >= .99;
+}
+
+void Playfield::reset() {
+    _conquered = .5;
 }
