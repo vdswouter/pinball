@@ -14,7 +14,11 @@ class Ball : public PositionedCircle {
         void resetTrack();
 
     private:
+    int prevx = 0;
+    int prevy = 0;
         vector<Shape> _track;
+        ofFbo fbo;
+//    Shape shapekakker;
     
 };
 
