@@ -5,17 +5,28 @@
 	<Projection_DOWN_RIGHT>724.898, 470.204</Projection_DOWN_RIGHT>
 <group/>
 <Projection_Coords>
-		<UP_LEFT>0, 0</UP_LEFT>
-		<UP_RIGHT>1280, 0</UP_RIGHT>
-		<DOWN_RIGHT>1280, 960</DOWN_RIGHT>
-		<DOWN_LEFT>0, 960</DOWN_LEFT>
+		<UP_LEFT>1103.67, 245.551</UP_LEFT>
+		<UP_RIGHT>1097.14, 804.571</UP_RIGHT>
+		<DOWN_RIGHT>163.265, 804.571</DOWN_RIGHT>
+		<DOWN_LEFT>163.265, 266.449</DOWN_LEFT>
 		<Hide_Video_Controls>0</Hide_Video_Controls>
 	<Projection_Dim>0</Projection_Dim>
 	</Projection_Coords>
 <Video_Input_Coords>
-		<UP_LEFT>195.918, 142.041</UP_LEFT>
-		<UP_RIGHT>326.531, 139.592</UP_RIGHT>
-		<DOWN_RIGHT>342.857, 345.306</DOWN_RIGHT>
-		<DOWN_LEFT>192.653, 345.306</DOWN_LEFT>
+		<UP_LEFT>355.918, 176.327</UP_LEFT>
+		<UP_RIGHT>359.184, 301.224</UP_RIGHT>
+		<DOWN_RIGHT>143.673, 303.673</DOWN_RIGHT>
+		<DOWN_LEFT>140.408, 176.327</DOWN_LEFT>
 	</Video_Input_Coords>
+<Holes_Positions>
+		<Hole_1>346.939, 158.163</Hole_1>
+		<Hole_2>76.5306, 321.429</Hole_2>
+		<Hole_3>295.918, 525.51</Hole_3>
+		<Hole_4>48.4694, 744.898</Hole_4>
+		<Hole_5>397.959, 877.551</Hole_5>
+		<Hole_6>0, 1000</Hole_6>
+		<Radius>39</Radius>
+		<Ball_Radius>31</Ball_Radius>
+		<speed>0</speed>
+	</Holes_Positions>
 </group>

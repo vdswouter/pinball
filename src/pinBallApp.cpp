@@ -119,7 +119,7 @@ void pinBall::newVideoBounds(){
 
 void pinBall::newPoint(){
     colorTr.BallPositionMapped = videoMatrix.preMult(ofVec3f(colorTr.BallPosition));
-//    game.setPosition(colorTr.BallPositionMapped.x, colorTr.BallPositionMapped.y);
+    game.setPosition(colorTr.BallPositionMapped.x, colorTr.BallPositionMapped.y);
 }
 
 //--------------------------------------------------------------
@@ -159,8 +159,8 @@ void pinBall::keyReleased(int key){
 
 //--------------------------------------------------------------
 void pinBall::mouseMoved(int x, int y ){
-    ofPoint pos = videoMatrix.preMult(ofVec3f(ofPoint(x, y)));
-    game.setPosition(pos.x, pos.y);
+//    ofPoint pos = videoMatrix.preMult(ofVec3f(ofPoint(x, y)));
+//    game.setPosition(pos.x, pos.y);
 }
 
 //--------------------------------------------------------------

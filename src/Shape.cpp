@@ -40,6 +40,9 @@ void Shape::kaktNenShape(int xpos, int ypos, int radius){
     type = ofRandom(0, 3);
     int color = ofRandom(0,6);
     int alpha = 200;
+    if (radius > 16) {
+        radius = 16;
+    }
     
     switch (color) {
         case 0:
